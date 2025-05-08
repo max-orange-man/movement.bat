@@ -1,4 +1,4 @@
 # Movement.bat
-A simple 2D movement Batch script.<br>
+Simple 2D movement in Batchfile.<br>
 Press WASD to move.<br>
 The program can sometimes close itself.
