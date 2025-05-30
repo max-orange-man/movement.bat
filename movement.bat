@@ -3,14 +3,14 @@ setlocal enableextensions enabledelayedexpansion
 title Movement
 color f
 
-set length=
-set height=
+set x=
+set y=
 
 :controls
 cls
 
-for %%a in (%height%) do echo.
-echo %length%[]
+for %%a in (%y%) do echo.
+echo %x%[]
 
 choice /c wasd /n
 if %errorlevel%==1 call:up
@@ -19,17 +19,17 @@ if %errorlevel%==3 call:down
 if %errorlevel%==4 call:right
 
 :up
-set height=!height:~0,-2!
+set y=!y:~0,-2!
 goto controls
 
 :left
-set length=!length:~0,-1!
+set x=!x:~0,-1!
 goto controls
 
 :down
-set height=a %height%
+set y=a %y%
 goto controls
 
 :right
-set length= %length%
+set x= %x%
 goto controls
